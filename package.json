@@ -1,0 +1,20 @@
+{
+  "name": "dogfort",
+  "version": "0.2.3",
+  "description": "A web server framework for Clojurescript on Node",
+  "main": "main.js",
+  "scripts": {
+    "build": "npx shadow-cljs release server",
+    "watch": "npx shadow-cljs watch server",
+    "dev": "npx shadow-cljs watch server"
+  },
+  "dependencies": {
+    "nrepl-client": "0.2.3",
+    "ws": "0.8.0",
+    "busboy": "0.2.12",
+    "mongodb": "^3.7.4"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.26.2"
+  }
+}

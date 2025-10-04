@@ -6,9 +6,30 @@
 
 Install [node](https://nodejs.org/en/).
 
+### Using shadow-cljs (Recommended)
+
 ```
-  lein new dogfort my-project
   cd my-project
+  npm install
+  npx shadow-cljs release server
+```
+then in another terminal
+```
+  cd my-project
+  node main.js
+```
+
+For development with live reloading:
+```
+  cd my-project
+  npx shadow-cljs watch server
+```
+This will automatically recompile when you make changes.
+
+### Legacy Leiningen support
+
+The project can still be built with Leiningen:
+```
   lein npm install
   lein build
 ```
@@ -17,14 +38,6 @@ then in another terminal
   cd my-project
   node main.js
 ```
-For easy development install supervisor
-```
-  npm install supervisor -g
-
-  cd my-project
-  supervisor main.js
-```
-Supervisor will restart the node.process whenever you make changes.
 
 ## Usage
 

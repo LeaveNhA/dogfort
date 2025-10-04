@@ -1,0 +1,11 @@
+{:source-paths ["src"]
+ :dependencies [[redlobster "0.2.3"]
+                [org.clojars.whamtet/hiccups "0.4.1"]]
+ :builds {:server {:target :node-script
+                   :output-to "main.js"
+                   :main dogfort.dev.testmain/main
+                   :devtools {:preloads [dogfort.dev.nrepl]}}
+          :dev {:target :node-script
+                :output-to "dev.js"
+                :main dogfort.dev.testmain/main
+                :devtools {:after-load dogfort.dev.testmain/main}}}}

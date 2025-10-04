@@ -1,5 +1,3 @@
-; Not so much code from Compojure and Snout here
-
 (ns dogfort.middleware.routes-macros)
 
 (defn- make-matcher [route]
