@@ -1,6 +1,7 @@
-{:source-paths ["src"]
+{:source-paths ["src" "tests"]
  :dependencies [[redlobster "0.2.3"]
-                [org.clojars.whamtet/hiccups "0.4.1"]]
+                [org.clojars.whamtet/hiccups "0.4.1"]
+                [metosin/reitit "0.9.1"]]
  :builds {:server {:target :node-script
                    :output-to "main.js"
                    :main dogfort.dev.testmain/main
@@ -8,4 +9,7 @@
           :dev {:target :node-script
                 :output-to "dev.js"
                 :main dogfort.dev.testmain/main
-                :devtools {:after-load dogfort.dev.testmain/main}}}}
+                :devtools {:after-load dogfort.dev.testmain/main}}
+          :test {:target :node-test
+                 :output-to "test.js"
+                 :autorun true}}}
